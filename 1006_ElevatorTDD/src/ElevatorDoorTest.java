@@ -7,10 +7,11 @@ import org.junit.Test;
 public class ElevatorDoorTest {
 
 	ElevatorDoor ed;
+	Elevator elevator;
 	
 	@Before
 	public void setUp() throws Exception {
-		ed = new ElevatorDoor();
+		ed = new ElevatorDoor(elevator);
 	}
 
 	@Test
