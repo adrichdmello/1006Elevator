@@ -5,11 +5,13 @@ public class ElevatorDoor {
 	
 	
 	boolean openable; 		//whether door is openable or not
-	
+	Elevator elevator;
 	
 	//String status="closed";
 	
-	public ElevatorDoor() {
+	public ElevatorDoor(Elevator elevator) {
+		System.out.println("Elevator Door Created");
+		this.elevator = elevator;
 		this.doorState = false;
 		this.openable = true;
 		

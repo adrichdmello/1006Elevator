@@ -12,6 +12,8 @@ public class FloorDoor {
 
 
 	public FloorDoor(int floorNo) {
+		int num = floorNo +1;
+		System.out.println("Floor Door Created at Floor "+num);
 		this.floorNo = floorNo;
 		this.fDoorState = false;
 		this.openable = true;

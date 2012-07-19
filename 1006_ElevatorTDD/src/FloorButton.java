@@ -9,17 +9,11 @@ public class FloorButton {
 	
 	
 	public FloorButton(String direction) {
-		
+	System.out.println(direction+" Floor Button Created.");	
 		this.direction = direction;
-	//7	this.floorNo = fp.getFloor().getFloorNo();
-		//this.fp = floorPanel;
-		
+	
 	}
 	
-	public FloorButton(int floorNo2, FloorPanel floorPanel) {
-		// TODO Auto-generated constructor stub
-	}
-
 	public boolean isPressed() {
 		return pressed;
 	}
