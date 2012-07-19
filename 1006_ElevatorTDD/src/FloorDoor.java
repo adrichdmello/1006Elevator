@@ -4,14 +4,15 @@ public class FloorDoor {
 	boolean fDoorState;		//whether door is open or closed. True for open
 	boolean openable; 		//whether door is openable or not
 	boolean elevatorIdle;	
-	
+	int floorNo;
 	
 	//String status="closed";
 	
 	
 
 
-	public FloorDoor() {
+	public FloorDoor(int floorNo) {
+		this.floorNo = floorNo;
 		this.fDoorState = false;
 		this.openable = true;
 		this.elevatorIdle = true;
@@ -47,7 +48,7 @@ public class FloorDoor {
 	
 	boolean fDoorOpen() throws OpenException{
 		if(isOpenable() && fDoorState==false && isElevatorIdle()){
-		System.out.println("code for opening Floor door");	
+		System.out.println("code for opening Floor door at floor "+floorNo );	
 		//setDoorState(true);
 		setfDoorState(true);
 		setOpenable(false);
@@ -61,7 +62,7 @@ public class FloorDoor {
 	
 	boolean fDoorClose() throws CloseException{
 		if(!isOpenable() && isfDoorState() && isElevatorIdle() ){
-		System.out.println("code for closing Floor door");
+		System.out.println("code for closing Floor door at floor "+floorNo);
 		//setDoorState(false);
 		setfDoorState(false);
 		setOpenable(true);

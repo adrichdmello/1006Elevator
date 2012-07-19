@@ -33,7 +33,7 @@ public class FloorButton {
 		pressed = true;
 		}else
 			pressed = false;
-		fp.makeRequest();
+		//fp.makeRequest();
 		//ecp.MoveElevator(floorNo);
 		System.out.println("Floor Button pressed at floor "+floorNo);
 		return pressed;

@@ -6,7 +6,7 @@ public class MainElevator {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Building b = new Building(5);
+	//	Building b = new Building(5);
 
 	}
 

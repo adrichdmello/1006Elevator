@@ -2,22 +2,11 @@ import java.util.ArrayList;
 
 
 public class Elevator {
-	int noOfFloor;
-	Building building;
-	ElevatorControlPanel ecp;
-	ElevatorDoor ed;
-	
-	public Elevator(int noOfFloors, Building building) {
-		this.building = building;
-		this.noOfFloor =noOfFloors;
-		ecp = new ElevatorControlPanel(this);
-		ed = new ElevatorDoor();
-		
-	}
 
-	public void move() {
-		System.out.println("Move from Elevator");
-		
+	Floor floor;
+	
+	public Elevator(int noOfFloors, Building building, ArrayList<Floor> floors) {
+		// TODO Auto-generated constructor stub
 	}
 
 }

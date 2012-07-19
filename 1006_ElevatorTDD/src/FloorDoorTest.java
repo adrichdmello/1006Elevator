@@ -11,7 +11,7 @@ public class FloorDoorTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		fd = new FloorDoor();
+		fd = new FloorDoor(4);
 	}
 
 	
@@ -24,7 +24,7 @@ public class FloorDoorTest {
 			assertEquals(true, fd.fDoorOpen());
 		} catch (OpenException e) {
 			
-			System.out.println("Door is already open");
+			System.out.println("Door is already open at floor "+fd.floorNo);
 		}
 	}
 
@@ -39,7 +39,7 @@ public class FloorDoorTest {
 			assertEquals(true, fd.fDoorOpen());
 		} catch (OpenException e) {
 			
-			System.out.println("Door is already open");
+			System.out.println("Door is already open at floor "+fd.floorNo);
 		}
 	}
 
@@ -53,7 +53,7 @@ public class FloorDoorTest {
 			assertEquals(true, fd.fDoorClose());
 		}
 		catch (CloseException e) {
-			System.out.println("Door is already closed");
+			System.out.println("Door is already closed at floor  "+fd.floorNo);
 		}
 	}
 
@@ -67,7 +67,7 @@ public class FloorDoorTest {
 			assertEquals(true, fd.fDoorClose());
 		}
 		catch (CloseException e) {
-			System.out.println("Door is already closed");
+			System.out.println("Door is already closed at floor "+fd.floorNo);
 		}
 	}
 }
