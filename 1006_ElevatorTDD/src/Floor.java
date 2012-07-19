@@ -16,10 +16,8 @@ public class Floor {
 //	this.fPanel = fPanel;
 //	}
 //	
-	public Floor(int floorNo, Elevator myElevator) {
-		// TODO Auto-generated constructor stub
+	public Floor(int floorNo) {
 		this.floorNo = floorNo;
-		this.elevator = myElevator;
 		this.fDoor = new FloorDoor();
 		this.fPanel = new FloorPanel(floorNo,this);
 	}

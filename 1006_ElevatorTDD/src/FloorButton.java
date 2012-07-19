@@ -4,14 +4,22 @@ public class FloorButton {
 	int floorNo;
 	FloorPanel fp;
 	boolean pressed=false;	//true for pressed
-	ElevatorControlPanel ecp;
+	//ElevatorControlPanel ecp;
+	private String direction;
 	
 	
-	public FloorButton(int floorNo, FloorPanel floorPanel) {
-		this.floorNo = fp.getFloor().getFloorNo();
-		this.fp = floorPanel;
+	public FloorButton(String direction) {
+		
+		this.direction = direction;
+	//7	this.floorNo = fp.getFloor().getFloorNo();
+		//this.fp = floorPanel;
+		
 	}
 	
+	public FloorButton(int floorNo2, FloorPanel floorPanel) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public boolean isPressed() {
 		return pressed;
 	}
@@ -20,9 +28,14 @@ public class FloorButton {
 		this.pressed = pressed;
 	}	
 	
-	void FloorButtonPressed(){
+	boolean FloorButtonPressed(){
+		if(!isPressed()){
 		pressed = true;
-		ecp.MoveElevator(floorNo);
+		}else
+			pressed = false;
+		fp.makeRequest();
+		//ecp.MoveElevator(floorNo);
 		System.out.println("Floor Button pressed at floor "+floorNo);
+		return pressed;
 	}
 }

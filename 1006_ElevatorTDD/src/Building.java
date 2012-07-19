@@ -9,9 +9,9 @@ public class Building {
 	
 	public Building(int noOfFloors){
 		System.out.println("Building Created with "+noOfFloors+" Floors");
-		myElevator = new Elevator(noOfFloors, this, floors);
+		myElevator = new Elevator(noOfFloors, this);
 		for(i=0; i<noOfFloors;i++)
-		floors.add(new Floor(i,myElevator));
+		floors.add(new Floor(i));
 	}
 
 }

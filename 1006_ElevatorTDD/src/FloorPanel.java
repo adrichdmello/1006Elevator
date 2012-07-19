@@ -6,11 +6,21 @@ public class FloorPanel {
 	//ArrayList<FloorButton> fButton = new ArrayList<FloorButton>(); 
 	Floor floor;
 	FloorButton upButton, downButton;
-	int floorNo;		
+	int floorNo;	
+	boolean pressed;
 	
 	
 
+	public boolean isPressed() {
+		return pressed;
+	}
+
+	public void setPressed(boolean pressed) {
+		this.pressed = pressed;
+	}
+
 	public FloorPanel(int floorNo,Floor floor2){
+		pressed = false;
 		this.floor = floor2;
 		this.floorNo = floorNo;
 		this.upButton =new FloorButton(floor.getFloorNo(), this);
@@ -22,15 +32,16 @@ public class FloorPanel {
 	void FloorUpButtonPressed(){
 		//fButton.get(0).FloorButtonPressed();
 		upButton.FloorButtonPressed();
+		this.setPressed(true);
 	}
 
 	void FloorDownButtonPressed(){
 		//fButton.get(0).FloorButtonPressed();
 		downButton.FloorButtonPressed();
+		this.setPressed(true);
 	}
 
 	public Floor getFloor() {
-		// TODO Auto-generated method stub
 		return floor;
 	}
 	
