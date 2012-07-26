@@ -8,6 +8,17 @@ public class FloorPanel {
 	int floorNo;
 	//ArrayList<FloorButton> fb = new ArrayList<FloorButton>();
 	FloorButton upFButton;
+	FloorButton downFButton;
+	
+	
+	
+	public FloorPanel(int floorNo, Floor floor) {
+		System.out.println("Floor Panel Created");
+	this.floor = floor;
+	this.floorNo = floorNo;
+	upFButton = new FloorButton("Up",this);
+	downFButton = new FloorButton("Down",this);
+	}
 	
 	public FloorButton getDownFButton() {
 		return downFButton;
@@ -15,16 +26,6 @@ public class FloorPanel {
 
 	public void setDownFButton(FloorButton downFButton) {
 		this.downFButton = downFButton;
-	}
-
-	FloorButton downFButton;
-	
-	public FloorPanel(int floorNo, Floor floor) {
-		System.out.println("Floor Panel Created");
-	this.floor = floor;
-	this.floorNo = floorNo;
-	upFButton = new FloorButton("Up");
-	downFButton = new FloorButton("Down");
 	}
 	
 	public FloorButton getUpFButton() {
@@ -50,6 +51,11 @@ public class FloorPanel {
 
 	public void setFloorNo(int floorNo) {
 		this.floorNo = floorNo;
+	}
+
+	public void makeRequest() throws OpenException, CloseException {
+		floor.makeRequest();
+		
 	}
 
 	

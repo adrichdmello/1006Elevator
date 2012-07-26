@@ -43,10 +43,6 @@ public void setFloors(ArrayList<Floor> floors) {
 		return floors.size();
 	}
 
-	public Elevator addElavator(Elevator elevator) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	
 }

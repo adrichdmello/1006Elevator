@@ -8,9 +8,18 @@ public class FloorButton {
 	private String direction;
 	
 	
-	public FloorButton(String direction) {
+	public String getDirection() {
+		return direction;
+	}
+
+	public void setDirection(String direction) {
+		this.direction = direction;
+	}
+
+	public FloorButton(String direction,FloorPanel fp) {
 	System.out.println(direction+" Floor Button Created.");	
 		this.direction = direction;
+		this.fp = fp;
 	
 	}
 	
@@ -22,14 +31,15 @@ public class FloorButton {
 		this.pressed = pressed;
 	}	
 	
-	boolean FloorButtonPressed(){
+	boolean FloorButtonPressed() throws OpenException, CloseException{
+		System.out.println("Floor Button pressed at floor "+fp.getFloorNo());
 		if(!isPressed()){
 		pressed = true;
 		}else
 			pressed = false;
-		//fp.makeRequest();
+		fp.makeRequest();
 		//ecp.MoveElevator(floorNo);
-		System.out.println("Floor Button pressed at floor "+floorNo);
+	
 		return pressed;
 	}
 }

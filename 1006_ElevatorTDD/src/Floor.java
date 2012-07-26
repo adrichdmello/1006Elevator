@@ -41,11 +41,28 @@ public void setFloorNo(int floorNo) {
 	public Floor(int floorNo,Building building) {
 		// TODO Auto-generated constructor stub
 		int num = floorNo + 1;
-		System.out.println("Floor Created at " +num);
+		System.out.println("Floor "+num+ " Created.");
 		this.floorNo = floorNo;
 		this.building = building;
 		floorPanel=new FloorPanel(floorNo, this);
-		floorDoor = new FloorDoor(floorNo);
+		floorDoor = new FloorDoor(floorNo,this);
+	}
+
+	public void makeRequest() throws OpenException, CloseException {
+		if(this.floorNo > building.elevator.getFloorNumber()){
+
+			building.elevator.moveUp(this.floorNo); 
+	
+		}else if(this.floorNo == building.elevator.getFloorNumber()){
+			this.floorDoor.fDoorOpen();
+			this.building.elevator.elevatorDoor.eDoorOpen();
+		}else{
+			building.elevator.moveDown(this.floorNo); 
+		}
+			
+	
+		
+		
 	}
 
 	

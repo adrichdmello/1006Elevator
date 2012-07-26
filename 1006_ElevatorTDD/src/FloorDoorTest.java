@@ -8,10 +8,12 @@ public class FloorDoorTest {
 
 	
 	FloorDoor fd;
-	
+	Floor f;
+	Building b;
 	@Before
 	public void setUp() throws Exception {
-		fd = new FloorDoor(4);
+		f = new Floor(2, b);
+		fd = new FloorDoor(4,f);
 	}
 
 	

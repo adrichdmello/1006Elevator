@@ -16,4 +16,22 @@ int i;
 		}
 	}
 
+	public void makeRequest(int buttonNo) throws OpenException, CloseException {
+		// TODO Auto-generated method stub
+
+		elevator.goToFloor(buttonNo);
+//		if(this.eb.get(0).getButtonNo() > this.elevator.building.floors.get(0).getFloorNo())
+//		{
+//			elevator.moveUp(this.eb.get(0).getButtonNo());	
+//		}
+//		else
+//			elevator.moveDown(this.eb.get(0).getButtonNo());
+
+	}
+	
+	
+	public ElevatorButton getElevatorButtonNo(int j){
+		return eb.get(j);
+	}
+
 }
